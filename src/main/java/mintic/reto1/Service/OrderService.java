@@ -34,7 +34,7 @@ public class OrderService {
         //si el id de la orden que se recibe como parametro es nulo, entonces valida el maximo id existente en base de datos
         if (order.getId() == null) {
             //valida el maximo id generado, si no hay ninguno aun el primer id sera 1
-            if (orderIdMaxima.isEmpty())
+            if (!orderIdMaxima.isPresent())
                 order.setId(1);
             //si retorna informacion suma 1 al maximo id existente y lo asigna como el codigo de la orden
             else
@@ -42,7 +42,7 @@ public class OrderService {
         }
         
         Optional<Order> e = orderRepository.getOrder(order.getId());
-        if (e.isEmpty()) {
+        if (!e.isPresent()) {
             return orderRepository.create(order);            
         }else{
             return order;
@@ -53,7 +53,7 @@ public class OrderService {
 
         if (order.getId() != null) {
             Optional<Order> orderDb = orderRepository.getOrder(order.getId());
-            if (!orderDb.isEmpty()) {
+            if (orderDb.isPresent()) {
                 if (order.getStatus() != null) {
                     orderDb.get().setStatus(order.getStatus());
                 }
