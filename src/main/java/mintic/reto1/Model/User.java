@@ -7,7 +7,7 @@ package mintic.reto1.Model;
 import javax.persistence.Id;
 // import javax.persistence.Table;
 
-// import org.springframework.data.annotation.Transient;
+import org.springframework.data.annotation.Transient;
 // import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 // import org.springframework.data.mongodb.core.mapping.Field;
@@ -36,6 +36,7 @@ public class User {
     @Id
     private Integer id;
 
+    
     private String identification;
     private String name;
     private Date birthtDay;
@@ -47,4 +48,5 @@ public class User {
     private String zone;
     private String type;
 
+    
 }

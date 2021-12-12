@@ -7,12 +7,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+// import org.springframework.data.annotation.Transient;
 
 @Document(collection = "orders")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Order {
+
+
+    // @Transient
+    // public static final String SEQUENCE_ORDER = "order_sequence";
+
+
     public static String PENDING = "Pendiente";
     public static String APROVED = "Aprobada";
     public static String REJECTED = "Rechazada";

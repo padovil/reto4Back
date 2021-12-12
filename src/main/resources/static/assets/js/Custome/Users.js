@@ -6,52 +6,52 @@ function pintarRespuesta(respuesta) {
 
   let myTable = `
 <table class='table table-sm table-responsive' style="height: auto; width: auto">
-    <thead>
-        <th style='width: 10%; background-color: #637007; color: white; ' scope='col'
+    <thead style='background-color: #012c3d;' > 
+        <th style='width: 10%;  color: white; ' scope='col'
             align='center'>
             <center>ID</center>
         </th>
 
-        <th style='width: auto; background-color: #637007; color: white;' scope='col'
+        <th style='width: auto;  color: white;' scope='col'
             align='center'>
             <center>IDENTIFICATION</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%; color: white; line-height: 100%'
             scope='col' align='center'>
             <center> NAME</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
             scope='col' align='center'>
             <center> ADDRESS</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> CELLPHONE</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> EMAIL</center>
         </th>
        
-        <th style='width: 10%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 10%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> ZONE</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> TYPE</center>
         </th>
 
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> EDIT</center>
         </th>
-        <th style='width: 20%; background-color: #637007; color: white; line-height: 100%'
+        <th style='width: 20%;  color: white; line-height: 100%'
         scope='col' align='center'>
             <center> DELETE</center>
         </th>
@@ -79,7 +79,7 @@ function pintarRespuesta(respuesta) {
       sessionStorage.setItem('email', respuesta[i].email)
 
 
-      myTable += "<td align='center'><button data-toggle='modal' data-target='#MymodalUpdate' class='btn btn-outline-success' onclick='consultarUser(" + respuesta[i].id + ",\"" + respuesta[i].email + "\")'> <img src='https://image.flaticon.com/icons/png/512/104/104668.png' width='50' height='30'>EDIT</button></td>";
+      myTable += "<td align='center'><button data-toggle='modal' data-target='#MymodalUpdate' class='btn btn-outline-info' onclick='consultarUser(" + respuesta[i].id + ",\"" + respuesta[i].email + "\")'> <img src='https://image.flaticon.com/icons/png/512/104/104668.png' width='50' height='30'>EDIT</button></td>";
 
       myTable += "<td align='center'><button  class='btn btn-outline-danger' onclick='deleteUser(" + respuesta[i].id + ",\"" + respuesta[i].email + "\")'> <img src='https://img.icons8.com/wired/64/000000/filled-trash.png' width='30' height='30'/>DELETE</button></td>";
 

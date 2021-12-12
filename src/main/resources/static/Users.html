@@ -39,21 +39,35 @@
 
 </head>
 
-<body>
+<body onload="ponerNombre()">
 
   <!-- <div class="wrapper "> -->
-  <div class="sidebar" data-color="white" data-active-color="danger">
+  <div class="sidebar" data-color="white" data-active-color="info">
     <div class="logo">
-      <a href="/Inicio" class="simple-text logo-normal">
+      <a class="simple-text logo-normal">
         <div class="logo-image-big">
-          <img src="./assets/img/sailor.png">
+          <center>
+            <h1 class="text-info">Saylor <br> Moon</h1>
+          </center>
         </div>
+      </a>
+
+      <div class="logo-image-big">
+        <center><img src="./assets/img/sailor.png" width="70%"></center>
+      </div>
       </a>
     </div>
 
 
+
     <div class="sidebar-wrapper">
       <ul class="nav">
+        <li>
+          <a href="./MyProfileAdmin.html">
+            <i class="nc-icon nc-touch-id"></i>
+            <p>MY PROFILE</p>
+          </a>
+        </li>
         <li>
           <a href="./inicio.html">
             <i class="nc-icon nc-bank"></i>
@@ -118,7 +132,7 @@
                       <div class="row">
                         <div class="col-xs-3">
                           <button data-toggle="modal" data-target="#Mymodal" class="btn btn-primary"
-                            style="background-color: #ADAA03; border-color: #ADAA03; color: black; font-weight: 900;">
+                            style="background-color: #000000; border-color: #000000; color: rgb(255, 255, 255); font-weight: 900;">
                             CREATE USER
                           </button>
                         </div>
@@ -201,53 +215,53 @@
                                               <option value="" selected>
                                                 Select a zone
                                               </option>
-                                              <option value=" COMUNA 1 NORTE">
-                                                COMUNA 1 NORTE
+                                              <option value="COMUNA_1_NORTE">
+                                                COMUNA1 NORTE
                                               </option>
-                                              <option value=" COMUNA 2 NORTORIENTAL">
+                                              <option value="COMUNA_2_NORTORIENTAL">
                                                 COMUNA 2 NORTORIENTAL
                                               </option>
-                                              <option value=" COMUNA 3 SAN FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
-                                              <option value=" COMUNA 4 OCCIDENTAL">
-                                                COMUNA 4 OCCIDENTAL
+                                              <option value="COMUNA_3_SAN_FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
+                                              <option value="COMUNA_4_OCCIDENTAL">
+                                                COMUNA 4 OCCIENTAL
                                               </option>
-                                              <option value=" COMUNA 5 GARCIA ROVIRA">
+                                              <option value="COMUNA_5_GARCIA_ROVIRA">
                                                 COMUNA 5 GARCIA ROVIRA
                                               </option>
-                                              <option value=" COMUNA 6 LA CONCORDIA">
+                                              <option value="COMUNA_6_LA_CONCORDIA">
                                                 COMUNA 6 LA CONCORDIA
                                               </option>
-                                              <option value=" COMUNA 7 LA CIUDADELA">
+                                              <option value="COMUNA_7_LA_CIUDADELA">
                                                 COMUNA 7 LA CIUDADELA
                                               </option>
-                                              <option value=" COMUNA 8 SUR OCCIDENTE">
+                                              <option value="COMUNA_8_SUR_OCCIDENTE">
                                                 COMUNA 8 SUR OCCIDENTE
                                               </option>
-                                              <option value=" COMUNA 9 LA PEDREGOSA">
+                                              <option value="COMUNA_9_LA_PEDREGOSA">
                                                 COMUNA 9 LA PEDREGOSA
                                               </option>
-                                              <option value=" COMUNA 10 PROVENZA">
+                                              <option value="COMUNA_10_PROVENZA">
                                                 COMUNA 10 PROVENZA
                                               </option>
-                                              <option value=" COMUNA 11 SUR">
+                                              <option value="COMUNA_11_SUR">
                                                 COMUNA 11 SUR
                                               </option>
-                                              <option value=" COMUNA 12 CABECERA DEL LLANO">
+                                              <option value="COMUNA_12_CABECERA_DEL_LLANO">
                                                 COMUNA 12 CABECERA DEL LLANO
                                               </option>
-                                              <option value=" COMUNA 13 ORIENTAL">
+                                              <option value="COMUNA_13_ORIENTAL">
                                                 COMUNA 13 ORIENTAL
                                               </option>
-                                              <option value=" COMUNA 14 MORRORICO">
+                                              <option value="COMUNA_14_MORRORICO">
                                                 COMUNA 14 MORRORICO
                                               </option>
-                                              <option value=" COMUNA 15 CENTRO">
+                                              <option value="COMUNA_15_CENTRO">
                                                 COMUNA 15 CENTRO
                                               </option>
-                                              <option value=" COMUNA 16 LAGOS DEL CACIQUE">
+                                              <option value="COMUNA_16_LAGOS_DEL_CACIQUE">
                                                 COMUNA 16 LAGOS DEL CACIQUE
                                               </option>
-                                              <option value=" COMUNA 17 MUTIS">
+                                              <option value="COMUNA_17_MUTIS">
                                                 COMUNA 17 MUTIS
                                               </option>
                                             </select>
@@ -281,7 +295,7 @@
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                   Close
                                 </button>
-                                <button type="button" style="background-color: #ADAA03; color: black;"
+                                <button type="button" style="background-color: #000000; color: rgb(255, 255, 255);"
                                   onclick="createUser()" class="btn btn-finish">
                                   Create user
                                 </button>
@@ -369,53 +383,53 @@
                                               <option value="" selected>
                                                 Select a zone
                                               </option>
-                                              <option value=" COMUNA 1 NORTE">
-                                                COMUNA 1 NORTE
+                                              <option value="COMUNA_1_NORTE">
+                                                COMUNA1 NORTE
                                               </option>
-                                              <option value=" COMUNA 2 NORTORIENTAL">
+                                              <option value="COMUNA_2_NORTORIENTAL">
                                                 COMUNA 2 NORTORIENTAL
                                               </option>
-                                              <option value=" COMUNA 3 SAN FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
-                                              <option value=" COMUNA 4 OCCIDENTAL">
-                                                COMUNA 4 OCCIDENTAL
+                                              <option value="COMUNA_3_SAN_FRANCISCO"> COMUNA 3 SAN FRANCISCO</option>
+                                              <option value="COMUNA_4_OCCIDENTAL">
+                                                COMUNA 4 OCCIENTAL
                                               </option>
-                                              <option value=" COMUNA 5 GARCIA ROVIRA">
+                                              <option value="COMUNA_5_GARCIA_ROVIRA">
                                                 COMUNA 5 GARCIA ROVIRA
                                               </option>
-                                              <option value=" COMUNA 6 LA CONCORDIA">
+                                              <option value="COMUNA_6_LA_CONCORDIA">
                                                 COMUNA 6 LA CONCORDIA
                                               </option>
-                                              <option value=" COMUNA 7 LA CIUDADELA">
+                                              <option value="COMUNA_7_LA_CIUDADELA">
                                                 COMUNA 7 LA CIUDADELA
                                               </option>
-                                              <option value=" COMUNA 8 SUR OCCIDENTE">
+                                              <option value="COMUNA_8_SUR_OCCIDENTE">
                                                 COMUNA 8 SUR OCCIDENTE
                                               </option>
-                                              <option value=" COMUNA 9 LA PEDREGOSA">
+                                              <option value="COMUNA_9_LA_PEDREGOSA">
                                                 COMUNA 9 LA PEDREGOSA
                                               </option>
-                                              <option value=" COMUNA 10 PROVENZA">
+                                              <option value="COMUNA_10_PROVENZA">
                                                 COMUNA 10 PROVENZA
                                               </option>
-                                              <option value=" COMUNA 11 SUR">
+                                              <option value="COMUNA_11_SUR">
                                                 COMUNA 11 SUR
                                               </option>
-                                              <option value=" COMUNA 12 CABECERA DEL LLANO">
+                                              <option value="COMUNA_12_CABECERA_DEL_LLANO">
                                                 COMUNA 12 CABECERA DEL LLANO
                                               </option>
-                                              <option value=" COMUNA 13 ORIENTAL">
+                                              <option value="COMUNA_13_ORIENTAL">
                                                 COMUNA 13 ORIENTAL
                                               </option>
-                                              <option value=" COMUNA 14 MORRORICO">
+                                              <option value="COMUNA_14_MORRORICO">
                                                 COMUNA 14 MORRORICO
                                               </option>
-                                              <option value=" COMUNA 15 CENTRO">
+                                              <option value="COMUNA_15_CENTRO">
                                                 COMUNA 15 CENTRO
                                               </option>
-                                              <option value=" COMUNA 16 LAGOS DEL CACIQUE">
+                                              <option value="COMUNA_16_LAGOS_DEL_CACIQUE">
                                                 COMUNA 16 LAGOS DEL CACIQUE
                                               </option>
-                                              <option value=" COMUNA 17 MUTIS">
+                                              <option value="COMUNA_17_MUTIS">
                                                 COMUNA 17 MUTIS
                                               </option>
                                             </select>
@@ -447,9 +461,9 @@
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                   Close
                                 </button>
-                                <button type="button" style="background-color: #ADAA03; color: black;"
+                                <button type="button" style="background-color: #000000; color: rgb(255, 255, 255);"
                                   onclick="updateUser()" class="btn btn-finish">
-                                  Updaye user
+                                  Update user
                                 </button>
                               </div>
                             </div>
@@ -499,9 +513,16 @@
             <script src="../assets/js/Custome/Users.js"></script>
             <script src="../assets/js/Custome/Validator.js"></script>
 
+            <script src="assets/js/Custome/nombre.js"></script>
+
 
             <script type="text/javascript">
               window.onload = autoInicioUsers();
+            </script>
+
+
+            <script type="text/javascript">
+              window.onload = ponerNombre();
             </script>
 
 </body>

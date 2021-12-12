@@ -6,66 +6,66 @@ function pintarRespuesta(respuesta) {
 
     let myTable = `
   <table class='table table-sm table-responsive' style="height: auto; width: auto">
-      <thead>
-          <th style='width: auto; background-color: #637007; color: white; ' scope='col'
+      <thead style='background-color: #012c3d;' >
+          <th style='width: auto; color: white; ' scope='col'
               align='center'>
               <center>REFERENCE</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white;' scope='col'
+          <th style='width: auto;  color: white;' scope='col'
               align='center'>
               <center>BRAND</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
               scope='col' align='center'>
               <center> CATEGORY</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
               scope='col' align='center'>
               <center> MATERIAL</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> GENDER</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> SIZE</center>
           </th>
          
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> DESCRIPTION</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> AVAILABILITY</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> PRICE</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> QUANTITY</center>
           </th>
 
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> PHOTOGRAPHY</center>
           </th>
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto;  color: white; line-height: 100%'
           scope='col' align='center'>
               <center> EDIT</center>
           </th>
-          <th style='width: auto; background-color: #637007; color: white; line-height: 100%'
+          <th style='width: auto; color: white; line-height: 100%'
           scope='col' align='center'>
               <center> DELETE</center>
           </th>
@@ -90,13 +90,13 @@ function pintarRespuesta(respuesta) {
             myTable += "<td align='center'>" + respuesta[i].availability + "</td>";
             myTable += "<td align='center'>" + respuesta[i].price + "</td>";
             myTable += "<td align='center'>" + respuesta[i].quantity + "</td>";
-            myTable += "<td align='center'>" + respuesta[i].photography + "</td>";
+            myTable += "<td align='center'><img src='" + respuesta[i].photography + "'></td>";
 
             sessionStorage.setItem('reference', respuesta[i].reference)
 
             
 
-            myTable += "<td align='center'><button data-toggle='modal' data-target='#MymodalUpdate' class='btn btn-outline-success' onclick='consultarProduct(" + respuesta[i].price + ",\"" + respuesta[i].reference + "\")'> <img src='https://image.flaticon.com/icons/png/512/104/104668.png' width='50' height='30'>EDIT</button></td>";
+            myTable += "<td align='center'><button data-toggle='modal' data-target='#MymodalUpdate' class='btn btn-outline-info' onclick='consultarProduct(" + respuesta[i].price + ",\"" + respuesta[i].reference + "\")'> <img src='https://image.flaticon.com/icons/png/512/104/104668.png' width='50' height='30'>EDIT</button></td>";
 
             myTable += "<td align='center'><button class='btn btn-outline-danger' onclick='deleteProduct(" + respuesta[i].price + ",\"" + respuesta[i].reference + "\")'> <img src='https://img.icons8.com/wired/64/000000/filled-trash.png' width='30' height='30'/>DELETE</button></td>";
 

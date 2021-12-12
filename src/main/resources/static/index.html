@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 </head>
 
-<body>
+<body onload="ponerNombre()">
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card" style="height: auto !important; width: 400px; ">
@@ -30,7 +30,7 @@
                     <h3>Sign In to <i>Saylor Moon</i></h3>
                 </div>
                 <div class="card-body">
-                    <form id="frmlogin" class="was-validated" >
+                    <form id="frmlogin" class="was-validated">
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -77,11 +77,18 @@
     </div>
 
 
-    
+
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
     <script src="./assets/js/Custome/index.js"></script>
+
+    <script src="assets/js/Custome/nombre.js"></script>
+
+    <script type="text/javascript">
+        window.onload = ponerNombre();
+    </script>
+
 </body>
 
 </html>

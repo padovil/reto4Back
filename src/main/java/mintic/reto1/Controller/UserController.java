@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
 
 /**
- *
+ * class
  * @author USUARIO
  */
 @RestController
@@ -32,14 +32,26 @@ import java.util.Optional;
 @CrossOrigin("*")
 public class UserController {
     
+    /**
+     * user service
+     */
     @Autowired
     private UserService userService;
      
+    /**
+     * get all
+     * @return
+     */
     @GetMapping("/all")
     public List<User> getAll() {
         return userService.getAll();
     }
     
+    /**
+     * crear
+     * @param user
+     * @return
+     */
     // @Autowired
     // private SequenceGeneratorService service;
     @PostMapping("/new")
@@ -49,27 +61,55 @@ public class UserController {
         return userService.create(user);
     }
     
+    /**
+     * actualizar
+     * @param user
+     * @return
+     */
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public User update(@RequestBody User user) {
         return userService.update(user);
     }
     
+
+    /**
+     * borrar
+     * @param id
+     * @return
+     */
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int id) {
         return userService.delete(id);
     }
+
+    /**
+     * autenticar
+     * @param email
+     * @param password
+     * @return
+     */
     @GetMapping("/{email}/{password}")
     public User authenticateUser(@PathVariable("email") String email, @PathVariable("password") String password) {
         return userService.authenticateUser(email, password);
     }
     
+    /**
+     * comprobar
+     * @param email
+     * @return
+     */
     @GetMapping("/emailexist/{email}")
     public boolean emailExists(@PathVariable("email") String email) {
         return userService.emailExists(email);
     }
 
+    /**
+     * obtener usuario
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     public Optional<User> getUser(@PathVariable("id") Integer id ) {
         return userService.getUser(id);

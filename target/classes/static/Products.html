@@ -39,21 +39,35 @@
 
 </head>
 
-<body>
+<body onload="ponerNombre()">
 
   <!-- <div class="wrapper "> -->
-  <div class="sidebar" data-color="white" data-active-color="danger">
+  <div class="sidebar" data-color="white" data-active-color="info">
     <div class="logo">
-      <a href="/Inicio" class="simple-text logo-normal">
+      <a class="simple-text logo-normal">
         <div class="logo-image-big">
-          <img src="./assets/img/sailor.png">
+          <center>
+            <h1 class="text-info">Saylor <br> Moon</h1>
+          </center>
         </div>
+      </a>
+
+      <div class="logo-image-big">
+        <center><img src="./assets/img/sailor.png" width="70%"></center>
+      </div>
       </a>
     </div>
 
 
+
     <div class="sidebar-wrapper">
       <ul class="nav">
+        <li>
+          <a href="./MyProfileAdmin.html">
+            <i class="nc-icon nc-touch-id"></i>
+            <p>MY PROFILE</p>
+          </a>
+        </li>
         <li>
           <a href="./inicio.html">
             <i class="nc-icon nc-bank"></i>
@@ -118,7 +132,7 @@
                       <div class="row">
                         <div class="col-xs-3">
                           <button data-toggle="modal" data-target="#Mymodal" class="btn btn-primary"
-                            style="background-color: #ADAA03; border-color: #ADAA03; color: black; font-weight: 900;">
+                            style="background-color: #000507; border-color: #000000; color: rgb(255, 255, 255); font-weight: 900;">
                             CREATE PRODUCT
                           </button>
                         </div>
@@ -194,7 +208,8 @@
 
                                           <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
                                             <label style="color: black;"><b>GENDER</b></label>
-                                            <select class="form-control" name="gender" id="gender" style="height: 50%;" required>
+                                            <select class="form-control" name="gender" id="gender" style="height: 50%;"
+                                              required>
                                               <option value="" selected>
                                                 Select an option
                                               </option>
@@ -235,13 +250,13 @@
                                             <div>
                                               <label class="radio-inline" style="color: black;" for="0">
                                                 <input type="radio" id="NoAvailability" value="false"
-                                                  name="availability" >&nbsp Not availability
+                                                  name="availability">&nbsp Not availability
                                               </label>
                                               &nbsp &nbsp &nbsp &nbsp
                                               <label class="radio-inline" style="color: black;" for="1">
-                                                <input type="radio" id="SiAvailability" value="true"
-                                                  name="availability" checked>&nbsp
-                                                  Availability
+                                                <input type="radio" id="SiAvailability" value="true" name="availability"
+                                                  checked>&nbsp
+                                                Availability
                                               </label>
                                             </div>
                                           </div>
@@ -254,14 +269,16 @@
 
                                           <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
                                             <label style="color: black;"><b>QUANTITY</b></label>
-                                            <input type="number" class="form-control is-valid" id="quantity" maxlength="10"
-                                              placeholder="Type product quantity" minlength="1" onload="" required>
+                                            <input type="number" class="form-control is-valid" id="quantity"
+                                              maxlength="10" placeholder="Type product quantity" minlength="1" onload=""
+                                              required>
                                           </div>
 
                                           <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
                                             <label style="color: black;"><b>PHOTOGRAPHY</b></label>
-                                            <input type="text" class="form-control is-valid" id="photography" maxlength="200"
-                                              placeholder="Type product photography link" minlength="1" onload="" required>
+                                            <input type="text" class="form-control is-valid" id="photography"
+                                              maxlength="200" placeholder="Type product photography link" minlength="1"
+                                              onload="" required>
                                           </div>
                                         </div>
                                       </div>
@@ -273,7 +290,7 @@
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">
                                   Close
                                 </button>
-                                <button type="button" style="background-color: #ADAA03; color: black;"
+                                <button type="button" style="background-color: #000000; color: rgb(255, 255, 255);"
                                   onclick="createProduct()" class="btn btn-finish">
                                   Create product
                                 </button>
@@ -284,169 +301,173 @@
                       </div>
                       <!-- Modal crear -->
 
-                       <!-- Modal UPDATE -->
-                       <div class="modal fade" id="MymodalUpdate" tabindex="-1" role="dialog"
-                       aria-labelledby="exampleModalLabel" aria-hidden="true">
-                       <div class="modal-dialog modal-lg" role="document">
-                         <div class="modal-content">
-                           <div class="modal-header">
-                             <h5 class="modal-title" id="exampleModalLabel">
-                               UPDATE PRODUCT
-                             </h5>
-                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                               <span aria-hidden="true">&times;</span>
-                             </button>
-                           </div>
-                           <div class="modal-body">
-                             <div id="form" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                               <form action="" method="" class="was-validated" data-toggle="validator">
-                                 <div class="row">
-                                   <div class="responsive">
-                                     <div id="form" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
-                                       <div class="form-row">
-                                         <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
-                                           <label style="color: black;"><b>REFERENCE</b></label>
-                                           <input type="text" class="form-control is-valid" id="referenceU"
-                                             maxlength="10" placeholder="Type product reference" minlength="1"
-                                             onload="" readonly>
-                                         </div>
+                      <!-- Modal UPDATE -->
+                      <div class="modal fade" id="MymodalUpdate" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                UPDATE PRODUCT
+                              </h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div id="form" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <form action="" method="" class="was-validated" data-toggle="validator">
+                                  <div class="row">
+                                    <div class="responsive">
+                                      <div id="form" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
+                                        <div class="form-row">
+                                          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
+                                            <label style="color: black;"><b>REFERENCE</b></label>
+                                            <input type="text" class="form-control is-valid" id="referenceU"
+                                              maxlength="10" placeholder="Type product reference" minlength="1"
+                                              onload="" readonly>
+                                          </div>
 
-                                         <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
-                                           <label style="color: black;"><b>BRAND</b></label>
-                                           <input type="text" class="form-control is-valid" id="brandU" maxlength="10"
-                                             placeholder="Type product brand" minlength="1" onload="" required>
-                                         </div>
-
-
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>CATEGORY</b></label>
-                                           <select class="form-control" name="categoryU" id="categoryU" required
-                                             style="height: 50%;">
-                                             <option value="" selected>
-                                               Select an option
-                                             </option>
-                                             <option value="Formal">
-                                               Formal
-                                             </option>
-                                             <option value="Casual">
-                                               Casual
-                                             </option>
-                                             <option value="Deportivo">Deportivo</option>
-                                           </select>
-                                         </div>
-
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>MATERIAL</b></label>
-                                           <select class="form-control" name="materialU" id="materialU" required
-                                             style="height: 50%;">
-                                             <option value="" selected>
-                                               Select an option
-                                             </option>
-                                             <option value="Leather">
-                                               Leather
-                                             </option>
-                                             <option value="Synthetic">
-                                               Synthetic
-                                             </option>
-                                           </select>
-                                         </div>
-
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>GENDER</b></label>
-                                           <select class="form-control" name="genderU"  required id="genderU" style="height: 50%;">
-                                             <option value="" selected>
-                                               Select an option
-                                             </option>
-                                             <option value="Woman">
-                                               Woman
-                                             </option>
-                                             <option value="Man">
-                                               Man
-                                             </option>
-                                             <option value="Unisex">
-                                               Unisex
-                                             </option>
-                                           </select>
-                                         </div>
-
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>SIZE</b></label>
-                                           <input type="number" class="form-control is-valid" id="sizeU" maxlength="2"
-                                             placeholder="Type product size" minlength="1" onload="" required>
-                                         </div>
-
-                                         <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
-                                           <label style="color: black;"><b>DESCRIPTION</b></label>
-                                           <textarea class="form-control  is-valid"
-                                             style="resize: vertical; height: 100px; max-height: 500px;"
-                                             id="descriptionU" rows="100" cols="40" maxlength="80" minlength="1"
-                                             placeholder="Type product description" onblur="" required></textarea>
-                                           <small style="text-align: right;" class="form-text text-muted">
-                                             <span class="contador" id="contador_descriptionU">80/80
-                                             </span>
-                                           </small>
-                                         </div>
+                                          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
+                                            <label style="color: black;"><b>BRAND</b></label>
+                                            <input type="text" class="form-control is-valid" id="brandU" maxlength="10"
+                                              placeholder="Type product brand" minlength="1" onload="" required>
+                                          </div>
 
 
-                                         <div class="form-group  col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>AVAILABILITY</b></label>
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>CATEGORY</b></label>
+                                            <select class="form-control" name="categoryU" id="categoryU" required
+                                              style="height: 50%;">
+                                              <option value="" selected>
+                                                Select an option
+                                              </option>
+                                              <option value="Formal">
+                                                Formal
+                                              </option>
+                                              <option value="Casual">
+                                                Casual
+                                              </option>
+                                              <option value="Deportivo">Deportivo</option>
+                                            </select>
+                                          </div>
 
-                                           <div>
-                                             <label class="radio-inline" style="color: black;" for="0">
-                                               <input type="radio" id="NoAvailabilityU" value="false"
-                                                 name="availabilityU" >&nbsp Not availability
-                                             </label>
-                                             &nbsp &nbsp &nbsp &nbsp
-                                             <label class="radio-inline" style="color: black;" for="1">
-                                               <input type="radio" id="SiAvailabilityU" value="true"
-                                                 name="availabilityU" checked>&nbsp
-                                                 Availability
-                                             </label>
-                                           </div>
-                                         </div>
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>MATERIAL</b></label>
+                                            <select class="form-control" name="materialU" id="materialU" required
+                                              style="height: 50%;">
+                                              <option value="" selected>
+                                                Select an option
+                                              </option>
+                                              <option value="Leather">
+                                                Leather
+                                              </option>
+                                              <option value="Synthetic">
+                                                Synthetic
+                                              </option>
+                                            </select>
+                                          </div>
 
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>PRICE</b></label>
-                                           <input type="number" class="form-control is-valid" id="priceU" maxlength="10"
-                                             placeholder="Type product price" minlength="1" onload="" required>
-                                         </div>
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>GENDER</b></label>
+                                            <select class="form-control" name="genderU" required id="genderU"
+                                              style="height: 50%;">
+                                              <option value="" selected>
+                                                Select an option
+                                              </option>
+                                              <option value="Woman">
+                                                Woman
+                                              </option>
+                                              <option value="Man">
+                                                Man
+                                              </option>
+                                              <option value="Unisex">
+                                                Unisex
+                                              </option>
+                                            </select>
+                                          </div>
 
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>QUANTITY</b></label>
-                                           <input type="number" class="form-control is-valid" id="quantityU" maxlength="10"
-                                             placeholder="Type product quantity" minlength="1" onload="" required>
-                                         </div>
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>SIZE</b></label>
+                                            <input type="number" class="form-control is-valid" id="sizeU" maxlength="2"
+                                              placeholder="Type product size" minlength="1" onload="" required>
+                                          </div>
 
-                                         <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
-                                           <label style="color: black;"><b>PHOTOGRAPHY</b></label>
-                                           <input type="text" class="form-control is-valid" id="photographyU" maxlength="200"
-                                             placeholder="Type product photography link" minlength="1" onload="" required>
-                                         </div>
-                                       </div>
-                                     </div>
-                                   </div>
-                                 </div>
-                               </form>
-                             </div>
-                             <div class="modal-footer">
-                               <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                 Close
-                               </button>
-                               <button type="button" style="background-color: #ADAA03; color: black;"
-                                 onclick="updateProduct()" class="btn btn-finish">
-                                 Update product
-                               </button>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                     <!-- Modal Update -->
+                                          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12	col-xl-12">
+                                            <label style="color: black;"><b>DESCRIPTION</b></label>
+                                            <textarea class="form-control  is-valid"
+                                              style="resize: vertical; height: 100px; max-height: 500px;"
+                                              id="descriptionU" rows="100" cols="40" maxlength="80" minlength="1"
+                                              placeholder="Type product description" onblur="" required></textarea>
+                                            <small style="text-align: right;" class="form-text text-muted">
+                                              <span class="contador" id="contador_descriptionU">80/80
+                                              </span>
+                                            </small>
+                                          </div>
 
-                    <div id="resultProducts" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
-                    </div>
 
-                    <br><br><br><br>
+                                          <div class="form-group  col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>AVAILABILITY</b></label>
+
+                                            <div>
+                                              <label class="radio-inline" style="color: black;" for="0">
+                                                <input type="radio" id="NoAvailabilityU" value="false"
+                                                  name="availabilityU">&nbsp Not availability
+                                              </label>
+                                              &nbsp &nbsp &nbsp &nbsp
+                                              <label class="radio-inline" style="color: black;" for="1">
+                                                <input type="radio" id="SiAvailabilityU" value="true"
+                                                  name="availabilityU" checked>&nbsp
+                                                Availability
+                                              </label>
+                                            </div>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>PRICE</b></label>
+                                            <input type="number" class="form-control is-valid" id="priceU"
+                                              maxlength="10" placeholder="Type product price" minlength="1" onload=""
+                                              required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>QUANTITY</b></label>
+                                            <input type="number" class="form-control is-valid" id="quantityU"
+                                              maxlength="10" placeholder="Type product quantity" minlength="1" onload=""
+                                              required>
+                                          </div>
+
+                                          <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6	col-xl-6">
+                                            <label style="color: black;"><b>PHOTOGRAPHY</b></label>
+                                            <input type="text" class="form-control is-valid" id="photographyU"
+                                              maxlength="200" placeholder="Type product photography link" minlength="1"
+                                              onload="" required>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                  Close
+                                </button>
+                                <button type="button" style="background-color: #000000; color: rgb(255, 255, 255);"
+                                  onclick="updateProduct()" class="btn btn-finish">
+                                  Update product
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Modal Update -->
+
+                      <div id="resultProducts" class="col-12 col-sm-12	col-md-12 col-lg-12	col-xl-12">
+                      </div>
+
+                      <br><br><br><br>
 
                     </div>
                   </div>
@@ -479,14 +500,20 @@
             <!-- Bootstrap Date-Picker Plugin -->
 
 
-            
-            <script src="../assets/js/Custome/ContadorCaracteres.js"></script>           
-            <script src="../assets/js/Custome/Products.js"></script>
-                 
 
-            <script type="text/javascript">              
+            <script src="../assets/js/Custome/ContadorCaracteres.js"></script>
+            <script src="../assets/js/Custome/Products.js"></script>
+
+            <script src="assets/js/Custome/nombre.js"></script>
+
+
+            <script type="text/javascript">
               // window.onload = getUserbyEmail();
-              window.onload = autoInicioProducts();        
+              window.onload = autoInicioProducts();
+            </script>
+
+            <script type="text/javascript">
+              window.onload = ponerNombre();
             </script>
 
 </body>

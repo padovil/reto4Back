@@ -32,11 +32,16 @@ async function getUserbyEmailandPassword(email, password, badrequest) {
         else {
             // const $welcome = document.querySelector("#welcome")
             sessionStorage.setItem('nombre', responseJson.name );
+            sessionStorage.setItem('zona', responseJson.zone );
+            sessionStorage.setItem('User', JSON.stringify(responseJson) );
+
 
             if(responseJson.type == 'ADM'){
-                window.location.href = "products.html"           
-            }else{
-                window.location.href = "home.html"           
+                window.location.href = "inicio.html"           
+            }else if (responseJson.type == 'ASE'){
+                window.location.href = "Asesores.html"           
+            }else if(responseJson.type == 'COORD'){
+                window.location.href = "Coordinador.html" 
             }
                     
         }
